@@ -2,12 +2,16 @@ node  {
 
     stage ('SCM')  {
         // git clone
-        git 'https://github.com/gajulasrikar/Calculator.git'
+        git 'https://github.com/openmrs/openmrs-core.git'
     }
 
     stage ('build the packages')  {
         // mvn package
         sh 'mvn package'
+    }
+
+    stage ('total test result')  {
+        Junit 'target/surefir-reports'
     }
 
     stage ('archival')  {
