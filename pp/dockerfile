@@ -11,7 +11,7 @@ node  {
     }
 
     stage ('total test result')  {
-        Junit 'target/surefir-reports'
+        Junit 'target/surefire-reports/*.xml'
     }
 
     stage ('archival')  {
