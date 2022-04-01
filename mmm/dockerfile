@@ -14,4 +14,5 @@ node  {
         // archiving artifact
         // archiveArtifacts artifacts: 'target/*.jar'
     }
-}    
+
+       }
