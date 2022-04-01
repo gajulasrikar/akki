@@ -10,8 +10,8 @@ node  {
         sh 'mvn package'
     }
 
-    stage ('total test result')  {
-        Junit 'target/surefire-reports/*.xml'
+    stage ('show test result')  {
+        Junit ' target/surefire-reports/*.xml '
     }
 
     stage ('archival')  {
